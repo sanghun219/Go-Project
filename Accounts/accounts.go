@@ -2,6 +2,7 @@ package accounts
 
 import (
 	"errors"
+	"fmt"
 )
 
 // Account Struct
@@ -45,6 +46,6 @@ func (a Account) Owner() string {
 	return a.owner
 }
 
-// func (a Account) String() string {
-// 	return fmt.Sprint(a.Owner(), "'s account.\n Has ", a.Balance())
-// }
+func (a Account) String() string {
+	return fmt.Sprint(a.Owner(), "'s account.\n Has ", a.Balance())
+}
